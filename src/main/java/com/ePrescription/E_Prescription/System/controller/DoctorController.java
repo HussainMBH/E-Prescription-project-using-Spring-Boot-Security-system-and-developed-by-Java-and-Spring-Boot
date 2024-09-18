@@ -20,7 +20,7 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
-    @PostMapping("/adddoctor")
+    @PostMapping("/addDoctor")
     public ResponseEntity<String> addDoctor(@Valid @RequestBody Doctor doctor){
         doctorService.addDoctor(doctor);
         return new ResponseEntity<>("Doctor details added successfully", HttpStatus.CREATED);
